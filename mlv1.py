@@ -29,7 +29,7 @@ input_df = pd.DataFrame([data])
 # Predict Button
 if st.button("🎯 Predict Score"):
     try:
-        with open("/home/lenovo/PycharmProjects/test_api/temp2/best_model.pkl", "rb") as f:
+        with open("best_model.pkl", "rb") as f:
             model = pickle.load(f)
 
         if isinstance(model, tuple) and model[0] == "dl":
